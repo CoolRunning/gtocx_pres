@@ -28,36 +28,15 @@
         
         <section data-background-image="img/galaxy2.jpg" data-vertical-align-top>
           <h2>Our Plan to Settle the Galaxy</h2>
-          <div class="twocolumn" style="padding-top:300px">
-            <div>
-              <ul>
-                <li>Dario Izzo</li>
-                <li>Marcus Märtens</li>
-                <li>Ekin Oztürk</li>
-                <li>Máté Kisantal</li>
-                <li>Konstantinos Konstantinidis</li>
-                <li>Luis F. Sim̃oes</li>
-                <li>Chit Hong Yam</li>
-                <li>Javier Hernando-Ayuso</li>
-              </ul>
-            </div>
-            <div>
-            <img class="plain" src="img/actlogo.png"/>
-            </div>
-          </div>
+                <p class="shade">Presentation online ->
+                <a href="http://coolrunning.github.io/gtocx_pres">http://coolrunning.github.io/gtocx_pres</a></p>
+                <p class="shade" style="color:#fff;font-size:20px;margin-top:340px;">Dario&nbsp;Izzo, <u>Marcus&nbsp;Märtens</u>, Ekin&nbsp;Oztürk, 
+                Máté&nbsp;Kisantal, Konstantinos&nbsp;Konstantinidis, Luís&nbsp;F.&nbsp;Sim̃oes,
+                Chit&nbsp;Hong&nbsp;Yam, Javier&nbsp;Hernando-Ayuso</p>
 
-          
-          
-          <!--<ul>
-            <li>Dario Izzo</li>
-            <li><b>Marcus Märtens</b></li>
-            <li>Ekin Oztürk</li>
-            <li>Máté Kisantal</li>
-            <li>Konstantinos Konstantinidis</li>
-            <li>Luis F. Simoes</li>
-            <li>Chit Hong Yam</li>
-            <li>Javier Hernando-Ayuso</li>
-          </ul>-->
+              <img src="img/esa_logo_white2.svg" style="height:80px;padding-right:500px;text-align:left"/>
+              <img src="img/actlogo.png" style="height:100px"/>
+
         </section>
         
         <section>
@@ -76,54 +55,185 @@
           
           <section>
             <h2>Problem details</h2>
-            <ul>
-              <li>100 000 stars spread in a 32 kpa disc</li>
-              <li>Slow generational ships: 0.005c</li>
-              <li>90 MYr (=90 Million Years)</li>
-              <li>Galaxy dynamics account for rotational curves anomalies.</li>
-            </ul>
+            <div class="twocolumn">
+              <div>
+                <ul style="padding:50px 0px 300px 0px">
+                  <li>100 000 stars spread in a 32 kpa disc</li>
+                  <li>Slow generational ships: 0.005c</li>
+                  <li>90 MYr (=90 Million Years)</li>
+                  <li>Galaxy dynamics account for rotational curves anomalies.</li>
+                </ul>
+              </div>
+              <div>
+                <img src="img/galaxy_evol.gif" width=500px />
+              </div>
+            </div>
           </section>
 
           <section>
             <h2>The fleet</h2>
-            <ul>
-              <li>3x Motherships (500 km/s DV, max 200 km/s per impulse, 3 impulse)</li>
-              <li>10x Settlement Pods (300 km/s DV, max 300 km/s per impulse, 1 impulse, single settlement)</li>
-              <li>2x Fast Ships (1500 km/s DV, max 1500 km/s per impulse, 2 impulse, single settlement)</li>
-              <li>3x Settlement Ships (400 km/s DV, max 175 km/s per impulse, 5 impulses, single settlement) per settlement (Von Neumann self-replicators)</li>
-            </ul>
+            
+            <img src="img/spaceship.gif" style="height:200px;padding-bottom:40px"/>  
+            
+            <table>
+						<thead>
+							<tr>
+								<th>Ship</th>
+								<th>Max Total $\Delta V$</th>
+								<th>Max$\Delta V$/impulse</th>
+                <th>#impulses</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Mother Ship</td>
+								<td>500 km/s</td>
+								<td>200 km/s</td>
+                <td>3</td>
+							</tr>
+							<tr>
+								<td>Settlement Pod</td>
+								<td>300 km/s</td>
+								<td>300 km/s</td>
+                <td>1</td>
+							</tr>
+							<tr>
+								<td>Fast Ship</td>
+								<td>1500 km/s</td>
+								<td>1500 km/s</td>
+                <td>2</td>
+							</tr>
+							<tr>
+								<td>Settler Ship</td>
+								<td>400 km/s</td>
+								<td>175 km/s</td>
+                <td>5</td>
+							</tr>
+              
+						</tbody>
+					</table>
+          
           </section>
 
         </section>
         
         <section>
-          <section>Downslide 1</section>
-          <section>Downslide 2</section>
+          <section>
+            <h2>Objective Function</h2>
+            $$
+            J = N \eta \sigma = N \underbrace{ \left(\frac{1}{
+            1 + 10^{−4} · N(E_r + E_{\theta})}\right)}_{\eta} \underbrace{\left(\frac{\Delta V_\text{max}}{\Delta V_\text{used}}\right)}_{\sigma}
+            $$
+            <ul>
+              <li>$N$: Number of settled stars</li>
+              <li>$\eta$: settlement spatial distribution efficiency $(<1)$</li>
+              <li>$\sigma$: $\Delta V$ efficiency $(>1)$</li>
+            </ul>
+            <p>These terms are strongly interdependent and need to be carefully 
+            balanced to achieve top scores!</p>
+          </section>
+          <section>
+            <h2>Settling the whole galaxy?</h2>
+            <img data-src="img/galaxy_errors.png" class="framed"/>
+            <ul>
+              <li>Ideal target distributions: $g$</li>
+              <ul>
+                <li>$g_r$: ideal distance distribution is <b>linear</b></li>
+                <li>$g_\Theta$: ideal angular distribution <b>uniform</b></li>
+              </ul>
+              <li>Realized star distributions of solution: $f$</li>
+              <li>Abysmal efficiency: $\eta = 7.023 \cdot 10^{-5}$</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Optimal spatial distributions</h2>
+            <img data-src="img/poisson_0myr.png" height=340px class="framed" />
+            <img data-src="img/poisson_90myr.png" height=340px class="framed" />
+            <p>Poisson Disc sampling covers the whole galactic disc uniformly!</p>
+            <p>Stars at the border of the galaxy are very hard to reach</p>
+          </section>
+          <section>
+            <h2>Optimal spatial distributions</h2>
+            <img data-src="img/unperturbed_spiral.png" height=340px class="framed" />
+            <img data-src="img/perturbed_spiral.png" height=340px class="framed" />
+            <p>Observation: distributions $r$ and $\Theta$ are independent.</p>
+            <p>Blue dots and reds dots have the same distributions according to $r$ and $\Theta$</p>
+            <p>Unperturbed spiral is too narrow (low $N$)</p>
+          </section>
         </section>
         
         <section>
-          <h2>Our Plan to Settle the Galaxy</h2>
-          <div class="twocolumn">
-            <div>
-              <ul>
-                <li>Dario Izzo</li>
-                <li><b>Marcus Märtens</b></li>
-                <li>Ekin Oztürk</li>
-                <li>Máté Kisantal</li>
-              </ul>
-            </div>
-            <div>
-              <ul>
-                <li>Konstantinos Konstantinidis</li>
-                <li>Luis F. Sim̃oes</li>
-                <li>Chit Hong Yam</li>
-                <li>Javier Hernando-Ayuso</li>
-              </ul>
-            </div>
-          </div>
+          <h2>Reaching the stars</h2>
+          <img data-src="img/deltavsectors.png" height=500px class="framed" />
         </section>
-      
-      
+        
+        <section>
+          <h2>Fast Ship capabilities</h2>
+              <img src="img/fast_ships90.png" style="height:400px" class="framed" />
+
+              <ul>
+                <li>Exhaustively compute two-impulse transfer from Sol to any other star</li>
+                <li>Filter transfers that take less than 40 Myr (83 915 / 100 000)</li>
+                <li>Final star position visualized (90 Myr)</li>
+              </ul>
+
+        </section>
+
+        <section>
+          <section>
+            <h2>Mother Ship design</h2>
+            <p>The Mother Ships allows for intricate designs</p>
+            <img src="img/mother_legs.svg" style="height:300px" />
+            <ul style="padding-top: 20px">
+              <li>a) Basic impulsive leg</li>
+              <li>b) Two stars - one impulse</li>
+              <li>c) One star  - two impulses</li>
+            </ul>
+          
+          </section>   
+          <section>
+            <h2>Two star - one impulse leg</h2>
+          $$
+          \begin{array}{rl}
+              \mbox{minimize:} & D_{s_2}(T_1, T_2, T_3) \\
+              \mbox{subject to:} & \Delta V_{mother} \le \min(\Delta V_{left}, 200) \ \text{km/sec}\\
+                & \Delta V_{\text{pod}_1} \le 300 \ \text{km/sec}\\
+                & \Delta V_{\text{pod}_2} \le 300 \ \text{km/sec}\\
+                & x_\text{mother}(T_2) =  x_{S_1}(T_2) \\ 
+                & x_\text{mother}(T_3) =  x_{S_2}(T_3) \\
+          \end{array}
+          $$ 
+            <ol style="padding-top: 20px">
+              <li>Target star $s_1$ with first impulse at $T_1$ and time of flight $T_2$</li>
+              <li>Find a star $s_2$ that comes close to the ship after $T_3$</li>
+              <li>Minimize the distance to second target star by adjusting $T_1, T_2$ and $T_3$</li>
+            </ol>
+          </section>
+        
+          <section>
+            <h2>Mother Ship Trajectory Atlas</h2>
+            <img data-src="img/handpicked_mothers3.png" class="framed" />
+            <p>Handpicked trajectories for bootstrapping the tree search</p>
+          </section>
+        </section>
+
+        <section>
+          <h2>The Settlers: Concurrent Tree Search</h2>
+          <img data-src="img/concurrent_tree.gif" style="height:500px"/>
+        </section>      
+
+        <section>
+          <section>
+            <h2>Refinements</h2>
+            <img data-src="img/nodestretch.svg" style="height:300px" />
+            <img data-src="img/shortcut.svg" style="height:300px" />
+          </section>      
+          <section>
+            <h2>Topological restructuring</h2>
+            <img data-src="img/restructure.svg" style="height:300px" />
+          </section>
+        </section>
+
         <section>
           <h2>Final solution</h2>
         </section>      
@@ -148,12 +258,16 @@
           { src: 'plugin/markdown/marked.js' },
           { src: 'plugin/markdown/markdown.js' },
           { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true }
+          { src: 'plugin/highlight/highlight.js', async: true },
+          { src: 'plugin/math/math.js', async: true }
         ],
         
         // Push each slide change to the browser history. Implies `hash: true`
         history: true,
-        center: false
+        
+        // No vertical center alignment
+        center: false,
+        
       });
     </script>
   </body>
