@@ -28,9 +28,9 @@
         
         <section data-background-image="img/galaxy2.jpg" data-vertical-align-top>
           <h2>Our Plan to Settle the Galaxy</h2>
-                <p class="shade">Presentation online ->
-                <a href="http://coolrunning.github.io/gtocx_pres">http://coolrunning.github.io/gtocx_pres</a></p>
-                <p class="shade" style="color:#fff;font-size:20px;margin-top:340px;">Dario&nbsp;Izzo, <u>Marcus&nbsp;Märtens</u>, Ekin&nbsp;Oztürk, 
+                <p class="shade">Do not read the .pdf, enjoy this presentation online!</p>
+                <p class="shade"><a href="http://coolrunning.github.io/gtocx_pres">http://coolrunning.github.io/gtocx_pres</a></p>
+                <p class="shade" style="color:#fff;font-size:20px;margin-top:300px;">Dario&nbsp;Izzo, <u>Marcus&nbsp;Märtens</u>, Ekin&nbsp;Oztürk, 
                 Máté&nbsp;Kisantal, Konstantinos&nbsp;Konstantinidis, Luís&nbsp;F.&nbsp;Sim̃oes,
                 Chit&nbsp;Hong&nbsp;Yam, Javier&nbsp;Hernando-Ayuso</p>
 
@@ -217,9 +217,66 @@
           </section>
         </section>
 
-        <section>
-          <h2>The Settlers: Concurrent Tree Search</h2>
-          <img data-src="img/concurrent_tree.gif" style="height:500px"/>
+
+        <section data-transition="slide">
+          <section data-transition="concave">
+          <h2>Settlers</h2>
+          </section>
+          <section data-transition="concave">
+            <h2>How to select stars?</h2>
+            <ul>
+              <ul>
+                <li>Cost function final merit: $J$ (or $\eta$)</li>
+                <ul>
+                  <li>Not meaningful for ranking intermediary solutions due to sensitivity of $\eta$</li>
+                </ul>
+              </ul>
+              <ul>
+                <li>Cost function time of flight: $T$</li>
+                <ul>
+                  <li>Triggers exponential growth and clusters in center of galaxy (bad)</li>
+                  <li>Not economic by spending excessive $\Delta V$</li>
+                </ul>
+              </ul>
+              <ul>
+                <li>Cost function cumulative: $\Delta V$</li>
+                <ul>
+                  <li>No pressure to expand fast and thus only few stars settled (bad)</li>
+                  <li>Oblivious to the target distribution</li>
+                </ul>
+              </ul>
+            </ul>
+            <h4 style="margin-top:30px">Solution?</h4>
+            Optimize for $\eta N$ (and take care of $\sigma$ later)!
+          </section>
+          <section data-transition="concave">
+            <h2>Which stars make good candidates?</h2>
+            <ul>
+              <li>Proximity according Euclidean distance can be suboptimal</li>
+              <li>We deploy a the <em>orbital indicator</em> to rank transfer potential between stars</li>
+              <ul>
+                <li>Let this be a star...
+                </li>
+              </ul>
+            </ul>
+          </section>
+          <section data-transition="concave">
+            <h2>How to grow trees?</h2>
+            <ul>
+              <li>Trees grown independent from each other might</li>
+                <ul>
+                  <li>overlap in nodes</li>
+                  <li>collectively decrease $\eta$ even if individually grown to increase it!</li>
+                  <li>merging and recombining trees not easy</li>
+                </ul>
+            </ul>
+            <h4 style="margin-top:30px">Solution?</h4>
+            Grow the trees <em>concurrently</em>!
+          </section>
+          <section>
+            <h2>Concurrent Tree Search in action</h2>
+            <img data-src="img/concurrent_tree.gif" style="height:500px"/>
+          </section>
         </section>      
 
         <section>
