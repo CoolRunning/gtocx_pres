@@ -25,27 +25,46 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        
         <section data-background-image="img/galaxy2.jpg" data-vertical-align-top>
           <h2>Our Plan to Settle the Galaxy</h2>
-                <p class="shade">Do not read the .pdf, enjoy this presentation online!</p>
-                <p class="shade"><a href="http://coolrunning.github.io/gtocx_pres">http://coolrunning.github.io/gtocx_pres</a></p>
-                <p class="shade" style="color:#fff;font-size:20px;margin-top:300px;">Dario&nbsp;Izzo, <u>Marcus&nbsp;Märtens</u>, Ekin&nbsp;Oztürk, 
-                Máté&nbsp;Kisantal, Konstantinos&nbsp;Konstantinidis, Luís&nbsp;F.&nbsp;Sim̃oes,
-                Chit&nbsp;Hong&nbsp;Yam, Javier&nbsp;Hernando-Ayuso</p>
-
-              <img src="img/esa_logo_white2.svg" style="height:80px;padding-right:500px;text-align:left"/>
-              <img src="img/actlogo.png" style="height:100px"/>
+                <p class="shade" style="display:none">For the best experience, enjoy this presentation online!</p>
+                <h5>
+                <div class="l-quadruple shade" style="margin:350px 0 10px 0; font-size:18pt">
+                  <div>
+                    <p>Dario Izzo</p>
+                    <p>Konstantinos Konstantinidis</p>
+                  </div>
+                  <div>
+                    <p><u>Marcus Märtens</u></p>
+                    <p>Luís F. Simões</p>
+                  </div>
+                  <div>
+                    <p>Ekin Oztürk</p>
+                    <p>Chit Hong Yam</p>
+                  </div>
+                  <div>
+                    <p>Máté Kisantal</p>
+                    <p>Javier Hernando-Ayuso</p>
+                  </div>
+                </div>
+                </h5>
+                
+                <div class="l-multiple">
+                  <img src="img/esa_logo_white2.svg" style="height:80px;"/>
+                  <p class="shade framed" style="padding:20px; margin-top: 0; background: rgba(255, 255, 255, 0.8);">
+                    <a href="http://coolrunning.github.io/gtocx_pres">http://coolrunning.github.io/gtocx_pres</a>
+                  </p>
+                  <img src="img/actlogo.png" style="height:100px"/>
+                </div>
 
         </section>
-        
         <section data-background-image="img/gtoctrophy.jpg" data-background-opacity=0.2>
           <section data-transition="concave">
             <h1>GTOC</h1>
             <h3>Global Trajectory Optimization Competition</h3>
             <ul>
               <li>(bi)-annual challenge for aerospace engineers and mathematicians world wide</li>
-              <li>Funded 2006 by Dario Izzo (ESA)</li>
+              <li>Funded 2005 by Dario Izzo (ESA)</li>
               <li>Challenge: solve a nearly impossible problem of interplanetary trajectory design</li>
               <li>More information on the <a href="https://sophia.estec.esa.int/gtoc_portal/">GTOC-portal</a></li>
             </ul>
@@ -55,28 +74,22 @@
             <blockquote>
             "In about ten thousand years from the present, humanity will reset its counting of years to zero. Year Zero will be the year when humanity decides the time is ripe for the human race to boldly venture into the galaxy and settle other star systems."
             </blockquote>
-            <div class="twocolumn" style="grid-template-columns: 3fr 2fr; text-align:center">
-              <div>
+            <div class="l-multiple">
                 <p>
                 <a href="https://gtocx.jpl.nasa.gov/media/gtocX_problem_stmt.pdf">GTOC-X Problem Statement</a>
                 <small>
                 released 15th May 2019 by Jet Propulsion Laboratory (JPL) 
                 </small>
                 </p>
-              </div>
-              <div>
-                <p>
-                <img src="img/jpl_logo.svg" style="width:200px" />
-                </p>
-              </div>                
+                <img src="img/jpl_logo.svg" style="width:200px;padding-right:94px" />
             </div>
           </section>
           <section data-transition="concave">
             <h2>Problem details</h2>
-            <div class="twocolumn">
+            <div class="l-double">
               <div>
-                <ul style="padding:50px 0px 300px 0px">
-                  <li>100 000 stars spread in a 32 kpa disc</li>
+                <ul style="margin:50px 0px 300px 0px">
+                  <li>100 000 stars spread in a 32 kpa sphere</li>
                   <li>Slow generational ships: 0.005c</li>
                   <li>90 MYr (=90 Million Years)</li>
                   <li>Galaxy dynamics account for rotational curves anomalies</li>
@@ -85,15 +98,13 @@
                 </ul>
               </div>
               <div>
-                <img src="img/galaxy_evol.gif" width=500px />
+                <img class="framed" src="img/galaxy_evol.gif" width=500px />
               </div>
             </div>
           </section>
           <section data-transition="concave">
             <h2>The fleet</h2>
-            
-            <img src="img/spaceship.gif" style="height:200px;padding-bottom:40px"/>  
-            
+            <img class="framed" src="img/spaceship.gif" style="height:200px;margin-bottom:40px"/>  
             <table>
 						<thead>
 							<tr>
@@ -128,12 +139,9 @@
 								<td>175 km/s</td>
                 <td>5</td>
 							</tr>
-              
 						</tbody>
 					</table>
-          
           </section>
-
         </section>
         
         <section data-background-image="img/galaxy2.jpg" data-background-opacity=0.1>
@@ -189,13 +197,11 @@
         <section data-background-image="img/galaxy2.jpg" data-background-opacity=0.1>
           <h2>Fast Ship capabilities</h2>
               <img src="img/fast_ships90.png" style="height:400px" class="framed" />
-
               <ul>
                 <li>Exhaustively compute two-impulse transfer from Sol to any other star</li>
                 <li>Filter transfers that take less than 40 Myr (83 915 / 100 000)</li>
                 <li>Final star position visualized (90 Myr)</li>
               </ul>
-
         </section>
 
         <section data-background-image="img/galaxy2.jpg" data-background-opacity=0.1>
@@ -208,7 +214,6 @@
               <li>b) Two stars - one impulse</li>
               <li>c) One star  - two impulses</li>
             </ul>
-          
           </section>   
           <section data-transition="concave">
             <h2>Two star - one impulse leg</h2>
@@ -228,14 +233,12 @@
               <li>Minimize the distance to second target star by adjusting $T_1, T_2$ and $T_3$</li>
             </ol>
           </section>
-        
           <section data-transition="concave">
             <h2>Mother Ship Trajectory Atlas</h2>
             <img data-src="img/handpicked_mothers3.png" class="framed" />
             <p>Handpicked trajectories for bootstrapping the tree search</p>
           </section>
         </section>
-
 
         <section data-transition="slide" data-background-image="img/galaxy2.jpg" data-background-opacity=0.1>
           <section data-transition="concave">
@@ -285,8 +288,9 @@
                 <li>Orbital indicator $d(x_1, x_2) = \Vert x_2 - x_1\Vert_2$</li>
               </ul>
             </ul>
-            <blockquote style="font-size:14pt;margin-top:30px"><i>D. Izzo, D. Hennes, L. F. Simoes, and M. Märtens</i>, “<a href="https://arxiv.org/pdf/1511.00821">Designing complex interplanetary trajectories for
-the global trajectory optimization competitions</a>” Space Engineering, pp. 151–176, Springer, 2016.</blockquote>
+            <blockquote style="font-size:14pt;margin-top:30px"><i>D. Izzo, D. Hennes, L. F. Simões, and M. Märtens</i>, 
+            “<a href="https://arxiv.org/pdf/1511.00821">Designing complex interplanetary trajectories for the 
+            global trajectory optimization competitions</a>” Space Engineering, pp. 151–176, Springer, 2016.</blockquote>
           </section>
           <section data-transition="concave">
             <h2>How to grow the trees?</h2>
@@ -308,31 +312,34 @@ the global trajectory optimization competitions</a>” Space Engineering, pp. 15
           </section>
           <section data-transition="concave">
             <h2>Concurrent Tree Search in action</h2>
-            <img data-src="img/concurrent_tree.gif" style="height:500px"/>
+            <img class="framed" data-src="img/concurrent_tree.gif" style="height:500px"/>
           </section>
           <section data-transition="concave">
             <h2>Settlement Trees in all shapes</h2>
-            <img src="img/tree0.png" style="width:200px" />
-            <img src="img/tree1.png" style="width:200px" />
-            <img src="img/tree2.png" style="width:200px" />
-            <img src="img/tree3.png" style="width:200px" />
-            
-            <img src="img/tree4.png" style="width:200px" />
-            <img src="img/tree5.png" style="width:200px" />
-            <img src="img/tree6.png" style="width:200px" />
-            <img src="img/tree7.png" style="width:200px" />
-            
-            <img src="img/tree8.png" style="width:200px" />
-            <img src="img/tree9.png" style="width:200px" />
-            <img src="img/tree10.png" style="width:200px" />
-          </section>
+            <div class="l-multiple" style="height:200px">
+              <img src="img/tree0.png" style="width:auto;"/>
+              <img src="img/tree1.png" style="width:auto;"/>
+              <img src="img/tree2.png" style="width:auto;"/>
+              <img src="img/tree3.png" style="width:auto;"/>
+            </div>
+            <div class="l-multiple" style="height:200px">
+              <img src="img/tree4.png" style="width:auto;"/>
+              <img src="img/tree5.png" style="width:auto;"/>
+              <img src="img/tree6.png" style="width:auto;"/>
+              <img src="img/tree7.png" style="width:auto;"/>
+            </div>
+            <div class="l-multiple" style="height:200px">
+              <img src="img/tree8.png" style="width:auto;"/>
+              <img src="img/tree9.png" style="width:auto;"/>
+              <img src="img/tree10.png" style="width:auto;"/>
+            </div>
+            </section>
         </section>      
-        
         
         <section data-background-image="img/galaxy2.jpg" data-background-opacity=0.1>
           <section data-transition="concave">
             <h2>But what about $\Delta V$?</h2>
-            <img src="img/screw.gif" style="margin-bottom:30px"/>          
+            <img class="framed" src="img/screw.gif" style="margin-bottom:30px"/>          
             <ul>
               <li>All transfers during concurrent tree search have been optimized for <em>time</em></li>
               <li>Consequently $\sigma \approx 1.18$ (bad)</li>
@@ -403,7 +410,14 @@ the global trajectory optimization competitions</a>” Space Engineering, pp. 15
               <img class="fragment fade-out" data-fragment-index="0" width="532" height="500" src="img/galax1.png" style="position:absolute;top:0;left:0;" />
               <img class="fragment fade-in" data-fragment-index="0" width="532" height="500" src="img/galax0.png" style="position:absolute;top:0;left:0;" />
             </div>
-            <p style="text-align:left; margin-left:280px"><span class="fragment fade-out" data-fragment-index="0">raw tree search</span><span class="fragment fade-in" data-fragment-index="0">&nbsp;&nbsp;&nbsp;&nbsp;aggressive refinement</span></p>
+            <div class="l-multiple">
+              <span class="fragment fade-out" data-fragment-index="0">
+                <p style="text-align:left; padding-left:130px;">raw tree search</p>
+              </span>
+              <span class="fragment fade-in" data-fragment-index="0">
+                <p style="text-align:right;">aggressive refinement</p>
+              </span>                
+            </div>
           </section>
         </section>
 
@@ -411,7 +425,7 @@ the global trajectory optimization competitions</a>” Space Engineering, pp. 15
           <section data-transition="concave">
             <h2>Final solution</h2>
             <p>Let us put everything so far together!</p>
-            <img src="img/ready.gif" style="margin-top:30px"/>
+            <img class="framed" src="img/ready.gif" style="margin-top:30px"/>
           </section>
           <section data-transition="concave">
             <h2>The Final search</h2>
@@ -528,23 +542,24 @@ the global trajectory optimization competitions</a>” Space Engineering, pp. 15
 
         <section data-background-image="img/galaxy2.jpg" data-background-opacity=0.1>
           <h2>The Galaxy is at peace again!</h2>
-          <img data-src="img/thanks.gif"/ style="margin-bottom:20px">
+          <img class="framed" data-src="img/thanks.gif" style="margin-bottom:20px"/>
         <h4>Questions?</h4>
         <p style="font-size:18pt">Contact me: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%6D%61%72%63%75%73%2E%6D%61%65%72%74%65%6E%73%40%65%73%61%2E%69%6E%74">Marcus Märtens</a></p>
         <h4>Links!</h4>
-        <ul>
-          <li><a href="https://www.esa.int/gsp/ACT/index.html">ESA's Advanced Concepts Team</a></li>
-          <li><a href="https://sophia.estec.esa.int/gtoc_portal/">GTOC Portal</a></li>
-          <li><a href="https://gtocx.jpl.nasa.gov">GTOC-X Homepage</a> (by JPL)</li>
-          <!--<li>This presentation:<a href="http://coolrunning.github.io/gtocx_pres">http://coolrunning.github.io/gtocx_pres</a></li>-->
-        </ul>
+        <div class="l-double">
+          <ul>
+            <li><a href="http://coolrunning.github.io/gtocx_pres">This presentation</a></li>
+            <li><a href="https://www.esa.int/gsp/ACT/index.html">ESA's Advanced Concepts Team</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://gtocx.jpl.nasa.gov">GTOC-X Homepage</a> (by JPL)</li>
+            <li><a href="https://sophia.estec.esa.int/gtoc_portal/">GTOC Portal</a></li>
+          </ul>
+        </div>
         </section>
 
       </div>
     </div>
-  
-  
-  
   
     <script src="js/reveal.js"></script>
 
