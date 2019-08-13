@@ -64,7 +64,7 @@
             <h3>Global Trajectory Optimization Competition</h3>
             <ul>
               <li>(bi)-annual challenge for aerospace engineers and mathematicians world wide</li>
-              <li>Funded 2005 by Dario Izzo (ESA)</li>
+              <li>Founded 2005 by Dario Izzo (ESA)</li>
               <li>Challenge: solve a nearly impossible problem of interplanetary trajectory design</li>
               <li>More information on the <a href="https://sophia.estec.esa.int/gtoc_portal/">GTOC-portal</a></li>
             </ul>
@@ -369,9 +369,12 @@
             <ul>
               <li>Analyse subtrees of depth 2</li>
               <ul>
-                <li>One root node, 3 children and 9 grandchildren (at most)</li>
-                <li>For a fixed root, there are $\binom{12}{3} = 220$ different trees possible</li>
-                <li>Accounting for arrival-constraints, compute <em>all of them</em> and pick the best!</li>
+				<li>Accounting for arrival-constraints, compute <em>all possible subtrees</em> and pick the best!</li>
+				<ul>
+				  <li>One root node, 3 children and 9 grandchildren (at most)</li>
+                  <li>For a fixed root, there are $\binom{12}{3} = 220$ different triplets possible</li>
+				  <li>For each triplet, find best matching to remaining 9 nodes</li> 
+                </ul>
                 <li>Recurse from leaves to root of tree</li>
               </ul>
             </ul>
